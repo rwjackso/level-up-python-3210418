@@ -17,10 +17,10 @@ def get_prime_factors(num, candidate=2):
                     get_prime_factors(num, candidate+1)
                 break
             elif num % candidate == 0:  # candidate is a factor    6%2=3
-                #print(f'appending {candidate}')
+                # print(f'appending {candidate}')
                 prime_factors.append(candidate)              # 2
                 num = num // candidate
-                #print(f'new number = {num}')
+                # print(f'new number = {num}')
                 prime_factors = prime_factors + \
                     get_prime_factors(num)        # 3,2
                 break
@@ -29,10 +29,12 @@ def get_prime_factors(num, candidate=2):
 
 
 if __name__ == "__main__":
-    i = 4
-    pf = get_prime_factors(i)
-    print(f'{i}: {pf}')
-
+    print('--------------------------------')
     for i in range(2, 20):
         pf = get_prime_factors(i)
         print(f'{i}: {pf}')
+    print('--------------------------------')
+
+    i = 630
+    pf = get_prime_factors(i)
+    print(f'{i}: {pf}')
