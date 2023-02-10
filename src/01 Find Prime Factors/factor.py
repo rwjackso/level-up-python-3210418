@@ -1,4 +1,5 @@
 def get_prime_factors(number):
+    ''' get_prime_factors '''
     factors = []
     divisor = 2
     while divisor <= number:
